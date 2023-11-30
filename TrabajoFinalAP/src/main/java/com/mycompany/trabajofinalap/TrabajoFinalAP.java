@@ -1,8 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
- */
-
 package com.mycompany.trabajofinalap;
 
 import java.util.Date;
@@ -14,7 +9,7 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 /**
  *
- * @author sebas
+ * @author Sebastián Commidari y Diego
  */
 public class TrabajoFinalAP {
 
@@ -31,15 +26,14 @@ public class TrabajoFinalAP {
         //session.save(tecnico);
         //ingresarOrden("Reparacion",5000,'2023-11-30',"Finalizado","24654789","1","1");
         session.getTransaction().commit();
-        
+
 }
 
 
 public void ingresarOrden(String descripcionOrden, double costo, Date fechaOrden, String estado, String dniCliente, int idCategoria, int idTecnico) {
         Cliente cliente = obtenerClientePorDni(dniCliente);
         if (cliente == null) {
-            // Si el cliente no existe, crear uno nuevo
-            // cliente = crearNuevoCliente(dniCliente, nombre, direccion, mail);
+            
         }
 
        Tecnico tecnico = obtenerTecnicoPorId(idTecnico);
